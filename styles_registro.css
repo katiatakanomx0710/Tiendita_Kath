@@ -1,0 +1,411 @@
+﻿/*======================================
+    ESTILOS GENERALES
+=======================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Segoe UI, Arial, Helvetica, sans-serif;
+
+    background:linear-gradient(180deg,#FFF8FB,#FFF4F8,#FFF9F2);
+
+    color:#6A5555;
+
+}
+
+/*======================================
+            HEADER
+=======================================*/
+
+.header{
+
+    width:100%;
+
+    background:#FFD9E8;
+
+    padding:22px;
+
+    text-align:center;
+
+    border-bottom:4px solid #F8C6DB;
+
+}
+
+.titulo{
+
+    font-size:36px;
+
+    color:#B76083;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+}
+
+/*======================================
+      CONTENEDOR PRINCIPAL
+=======================================*/
+
+.contenedorRegistro{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:60px 20px;
+
+}
+
+/*======================================
+      TARJETA
+=======================================*/
+
+.tarjetaRegistro{
+
+    width:470px;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:40px;
+
+    box-shadow:0px 10px 30px rgba(0,0,0,.12);
+
+    border:2px solid #FFE2EC;
+
+}
+
+/*======================================
+        ICONO
+=======================================*/
+
+.iconoRegistro{
+
+    width:90px;
+
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#FFE7F0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#D77DA6;
+
+    font-size:40px;
+
+    margin-bottom:20px;
+
+}
+
+/*======================================
+        TITULOS
+=======================================*/
+
+.tituloRegistro{
+
+    text-align:center;
+
+    color:#C05D86;
+
+    font-size:32px;
+
+    margin-bottom:10px;
+
+}
+
+.subtituloRegistro{
+
+    text-align:center;
+
+    color:#8A7474;
+
+    margin-bottom:35px;
+
+    font-size:15px;
+
+}
+
+/*======================================
+        CAMPOS
+=======================================*/
+
+.grupoCampo{
+
+    margin-bottom:22px;
+
+}
+
+.lblCampo{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:bold;
+
+    color:#936B6B;
+
+}
+
+.txtCampo{
+
+    width:100%;
+
+    padding:14px;
+
+    border:2px solid #FFD7E7;
+
+    border-radius:15px;
+
+    outline:none;
+
+    font-size:15px;
+
+    background:#FFFDFE;
+
+    transition:.3s;
+
+}
+
+.txtCampo:focus{
+
+    border-color:#FF9FC5;
+
+    box-shadow:0px 0px 10px rgba(255,170,200,.35);
+
+}
+
+/*======================================
+          TEXTO AYUDA
+=======================================*/
+
+.ayuda{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:#AA8A8A;
+
+    font-size:13px;
+
+}
+
+/*======================================
+            MENSAJES
+=======================================*/
+
+.lblMensaje{
+
+    display:block;
+
+    text-align:center;
+
+    min-height:24px;
+
+    color:#D14A71;
+
+    font-weight:bold;
+
+    margin-bottom:18px;
+
+}
+
+/*======================================
+            BOTON
+=======================================*/
+
+.contenedorBoton{
+
+    margin-top:10px;
+
+}
+
+.btnRegistro{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#FFB6D4;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.btnRegistro:hover{
+
+    background:#F596BE;
+
+    transform:translateY(-2px);
+
+    box-shadow:0px 8px 18px rgba(245,150,190,.35);
+
+}
+
+.btnRegistro:active{
+
+    transform:scale(.98);
+
+}
+
+/*======================================
+            VOLVER
+=======================================*/
+
+.volver{
+
+    margin-top:30px;
+
+    text-align:center;
+
+}
+
+.volver a{
+
+    text-decoration:none;
+
+    color:#A67B52;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.volver a:hover{
+
+    color:#D0905B;
+
+}
+
+/*======================================
+            FOOTER
+=======================================*/
+
+.footer{
+
+    margin-top:40px;
+
+    background:#FFD9E8;
+
+    padding:30px;
+
+    text-align:center;
+
+    border-top:4px solid #F8C6DB;
+
+}
+
+.redes{
+
+    margin-bottom:15px;
+
+}
+
+.redes i{
+
+    width:46px;
+
+    height:46px;
+
+    line-height:46px;
+
+    text-align:center;
+
+    margin:0 8px;
+
+    border-radius:50%;
+
+    background:#FFF3C6;
+
+    color:#9B7446;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.redes i:hover{
+
+    transform:translateY(-4px);
+
+    background:#FFE27E;
+
+}
+
+.copyright{
+
+    color:#8D6E63;
+
+    font-size:14px;
+
+}
+
+/*======================================
+        RESPONSIVE
+=======================================*/
+
+@media screen and (max-width:600px){
+
+.tarjetaRegistro{
+
+    width:95%;
+
+    padding:30px 20px;
+
+}
+
+.titulo{
+
+    font-size:28px;
+
+}
+
+.tituloRegistro{
+
+    font-size:26px;
+
+}
+
+.btnRegistro{
+
+    font-size:16px;
+
+}
+
+}

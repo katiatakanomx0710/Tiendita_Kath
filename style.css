@@ -1,0 +1,1545 @@
+﻿/* =========================================
+   KAT ESPACIAL
+   ESTILO ROSA / PASTEL / GIRLIE
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff7fb;
+    color: #5b4050;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    width: 100%;
+    min-height: 82px;
+
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 7%;
+
+    border-bottom: 3px solid #f2a7c7;
+
+    box-shadow: 0 3px 15px rgba(180, 110, 145, 0.08);
+
+    position: relative;
+    z-index: 100;
+}
+
+
+/* LOGO */
+
+.logo {
+    font-size: 29px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.logoKat {
+    color: #d783aa;
+}
+
+.logoEspacial {
+    color: #6d5267;
+}
+
+
+/* =========================================
+   ZONA USUARIO
+========================================= */
+
+.zonaUsuario {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lblUsuario {
+    color: #8d5674;
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+
+/* =========================================
+   BOTONES HEADER
+========================================= */
+
+.btnHeader {
+    border: none;
+
+    padding: 10px 15px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: all .25s ease;
+}
+
+
+/* LOGIN */
+
+.btnLogin {
+    background: #f8d9e7;
+    color: #7d4c64;
+}
+
+.btnLogin:hover {
+    background: #efbdd3;
+    transform: translateY(-2px);
+}
+
+
+/* REGISTRO */
+
+.btnRegistro {
+    background: #d783aa;
+    color: white;
+}
+
+.btnRegistro:hover {
+    background: #c76e99;
+    transform: translateY(-2px);
+}
+
+
+/* CERRAR SESIÓN */
+
+.btnCerrar {
+    background: #f3d4df;
+    color: #8b4d69;
+}
+
+.btnCerrar:hover {
+    background: #eab7cb;
+}
+
+
+/* =========================================
+   CARRITO
+========================================= */
+
+.btnCarrito {
+    position: relative;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #d783aa;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    transition: all .25s ease;
+}
+
+.btnCarrito:hover {
+    background: #c76e99;
+    transform: translateY(-2px);
+}
+
+
+/* CONTADOR */
+
+#contadorCarrito {
+    position: absolute;
+
+    top: -6px;
+    right: -6px;
+
+    min-width: 21px;
+    height: 21px;
+
+    padding: 0 5px;
+
+    background: #f5c84b;
+
+    color: #6d5267;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    border: 2px solid white;
+
+    transition: transform .2s ease;
+}
+
+
+/* =========================================
+   PANEL DEL CARRITO
+========================================= */
+
+.panelCarrito {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    width: 390px;
+    max-width: 92vw;
+    height: 100vh;
+
+    background: #ffffff;
+
+    z-index: 1000;
+
+    box-shadow: -8px 0 30px rgba(120, 70, 100, 0.18);
+
+    transform: translateX(105%);
+
+    transition: transform .35s ease;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.panelCarrito.abierto {
+    transform: translateX(0);
+}
+
+
+/* =========================================
+   TITULO CARRITO
+========================================= */
+
+.carritoTitulo {
+    min-height: 75px;
+
+    padding: 20px;
+
+    background: #fff4f9;
+
+    border-bottom: 2px solid #f4d4e2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #754d61;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.carritoTitulo div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.carritoTitulo i {
+    color: #d783aa;
+}
+
+
+/* BOTON CERRAR */
+
+.btnCerrarCarrito {
+    width: 34px;
+    height: 34px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f5dce7;
+
+    color: #89516b;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+.btnCerrarCarrito:hover {
+    background: #edbfd2;
+}
+
+
+/* =========================================
+   LISTA CARRITO
+========================================= */
+
+.listaCarrito {
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 15px;
+}
+
+
+/* PRODUCTO DEL CARRITO */
+
+.itemCarrito {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 14px 5px;
+
+    border-bottom: 1px solid #f1dce5;
+}
+
+
+/* INFORMACIÓN */
+
+.infoItem {
+    flex: 1;
+}
+
+.nombreItem {
+    color: #654657;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+.precioItem {
+    color: #d783aa;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.cantidadItem {
+    color: #927180;
+
+    font-size: 12px;
+
+    margin-top: 4px;
+}
+
+
+/* BOTON ELIMINAR */
+
+.btnEliminarItem {
+    border: none;
+
+    background: #fff0f5;
+
+    color: #cc789d;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.btnEliminarItem:hover {
+    background: #f6d4e1;
+}
+
+
+/* =========================================
+   CARRITO VACIO
+========================================= */
+
+.carritoVacio {
+    text-align: center;
+
+    padding: 60px 20px;
+
+    color: #a98294;
+}
+
+.carritoVacio i {
+    font-size: 40px;
+
+    color: #e5a9c3;
+
+    margin-bottom: 15px;
+}
+
+.carritoVacio p {
+    font-size: 17px;
+
+    font-weight: bold;
+
+    margin-bottom: 6px;
+}
+
+.carritoVacio span {
+    font-size: 13px;
+}
+
+
+/* =========================================
+   PARTE INFERIOR CARRITO
+========================================= */
+
+.carritoAbajo {
+    padding: 20px;
+
+    border-top: 2px solid #f4d4e2;
+
+    background: #fff8fb;
+}
+
+.filaTotal {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+
+    color: #674758;
+}
+
+.filaTotal span {
+    font-size: 16px;
+}
+
+.filaTotal strong {
+    color: #d06f9a;
+
+    font-size: 21px;
+}
+
+
+/* BOTON COMPRAR */
+
+.btnComprar {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 22px;
+
+    background: #d783aa;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+.btnComprar:hover {
+    background: #c76e99;
+}
+
+
+/* =========================================
+   BUSCADOR
+========================================= */
+
+.buscador {
+    padding: 35px 20px 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    background: #fff7fb;
+}
+
+.cajaBusqueda {
+    width: 650px;
+
+    min-height: 62px;
+
+    background: white;
+
+    border: 1px solid #efc7d9;
+
+    border-radius: 35px;
+
+    padding: 5px 7px;
+
+    display: flex;
+
+    align-items: center;
+
+    box-shadow: 0 7px 25px rgba(191, 120, 155, .10);
+}
+
+.iconoBusqueda {
+    color: #d783aa;
+
+    font-size: 19px;
+
+    margin: 0 15px;
+}
+
+.txtBuscar {
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 15px;
+
+    color: #654657;
+
+    background: transparent;
+
+    padding: 12px;
+}
+
+
+/* BOTON BUSCAR */
+
+.btnBuscar {
+    background: #d783aa;
+
+    color: white;
+
+    border: none;
+
+    padding: 13px 25px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: .25s;
+}
+
+.btnBuscar:hover {
+    background: #c76e99;
+}
+
+
+/* =========================================
+   CATÁLOGO
+========================================= */
+
+.catalogo {
+    width: 90%;
+
+    max-width: 1300px;
+
+    margin: 15px auto 60px;
+}
+
+
+/* TITULO */
+
+.encabezadoCatalogo {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+.encabezadoCatalogo h1 {
+    color: #694e61;
+
+    font-size: 31px;
+
+    text-align: center;
+}
+
+.decoracionTitulo {
+    color: #e2a0bd;
+
+    font-size: 20px;
+}
+
+
+.subtituloCatalogo {
+    text-align: center;
+
+    color: #a0788b;
+
+    font-size: 14px;
+
+    margin-top: 7px;
+}
+
+
+/* LINEA */
+
+.lineaDecorativa {
+    width: 65px;
+
+    height: 4px;
+
+    background: #e2a0bd;
+
+    margin: 15px auto 35px;
+
+    border-radius: 5px;
+}
+
+
+/* =========================================
+   PRODUCTOS
+========================================= */
+
+.productos {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+/* TARJETA */
+
+.tarjetaProducto {
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    border: 1px solid #f0d9e4;
+
+    box-shadow: 0 5px 17px rgba(150, 90, 120, .08);
+
+    transition: all .3s ease;
+}
+
+.tarjetaProducto:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 12px 25px rgba(150, 90, 120, .15);
+}
+
+
+/* IMAGEN */
+
+.imagenProducto {
+    width: 100%;
+
+    height: 220px;
+
+    background: #fceff5;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.imagenProducto img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .3s ease;
+}
+
+.tarjetaProducto:hover .imagenProducto img {
+    transform: scale(1.04);
+}
+
+
+/* INFORMACIÓN */
+
+.informacionProducto {
+    padding: 18px;
+}
+
+.informacionProducto h2 {
+    color: #654657;
+
+    font-size: 18px;
+
+    margin-bottom: 8px;
+}
+
+.descripcionProducto {
+    color: #947482;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    min-height: 40px;
+}
+
+
+/* PRECIO */
+
+.precioProducto {
+    color: #d06f9a;
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    margin: 15px 0;
+}
+
+
+/* =========================================
+   BOTON AGREGAR
+========================================= */
+
+.btnAgregar {
+    width: 100%;
+
+    border: none;
+
+    background: #f1c1d5;
+
+    color: #704a5c;
+
+    padding: 12px;
+
+    border-radius: 22px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: all .25s ease;
+}
+
+.btnAgregar:hover {
+    background: #d783aa;
+
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+.btnAgregar i {
+    margin-right: 5px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #6d5267;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+
+    border-top: 4px solid #e5a5c1;
+}
+
+.redes {
+    margin-bottom: 15px;
+}
+
+.redes i {
+    font-size: 19px;
+
+    margin: 0 9px;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+.redes i:hover {
+    color: #f2b8d0;
+
+    transform: translateY(-3px);
+}
+
+.footer p {
+    font-size: 13px;
+
+    margin-bottom: 5px;
+}
+
+.footer span {
+    font-size: 12px;
+
+    color: #edc9d8;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media screen and (max-width: 1000px) {
+
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    .header {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .zonaUsuario {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    .cajaBusqueda {
+        width: 100%;
+    }
+
+    .encabezadoCatalogo h1 {
+        font-size: 25px;
+    }
+    
+    /* ========================================
+   MODAL PRODUCTO
+======================================== */
+
+.modalProducto {
+
+    display: none;
+
+    position: fixed;
+
+    z-index: 9999;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+}
+
+
+/* ========================================
+   CONTENIDO
+======================================== */
+
+.contenidoModal {
+
+    position: relative;
+
+    width: 90%;
+    max-width: 750px;
+
+    background: #fffafc;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    display: flex;
+
+    gap: 30px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.25);
+
+    animation: aparecerModal .25s ease;
+
+}
+
+
+/* ========================================
+   ANIMACIÓN
+======================================== */
+
+@keyframes aparecerModal {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(.90);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+/* ========================================
+   BOTÓN CERRAR
+======================================== */
+
+.cerrarModal {
+
+    position: absolute;
+
+    top: 12px;
+    right: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f7c6d9;
+
+    color: #6b3d4c;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+}
+
+.cerrarModal:hover {
+
+    background: #e9a9c1;
+
+    transform: scale(1.1);
+
+}
+
+
+/* ========================================
+   IMAGEN
+======================================== */
+
+.imagenModal {
+
+    width: 45%;
+
+    min-height: 350px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #fff;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+}
+
+
+.imagenModal img {
+
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: contain;
+
+}
+
+
+/* ========================================
+   INFORMACIÓN
+======================================== */
+
+.infoModal {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.infoModal h2 {
+
+    font-size: 28px;
+
+    color: #6b3d4c;
+
+    margin-bottom: 15px;
+
+}
+
+
+.infoModal p {
+
+    color: #777;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+
+}
+
+
+.precioModal {
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    color: #d96b91;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* ========================================
+   BOTÓN CARRITO MODAL
+======================================== */
+
+.btnAgregarModal {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #d96b91;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .25s;
+
+}
+
+
+.btnAgregarModal:hover {
+
+    background: #b95779;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media screen and (max-width: 700px) {
+
+    .contenidoModal {
+
+        flex-direction: column;
+
+        max-height: 90vh;
+
+        overflow-y: auto;
+
+        gap: 15px;
+
+    }
+
+    .imagenModal {
+
+        width: 100%;
+
+        min-height: 250px;
+
+    }
+
+    .imagenModal img {
+
+        height: 250px;
+
+    }
+
+}
+
+/* ========================================
+   MODAL PRODUCTO
+======================================== */
+
+.modalProducto {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.contenidoModal {
+    position: relative;
+    width: 90%;
+    max-width: 750px;
+    background: #fffafc;
+    border-radius: 20px;
+    padding: 30px;
+
+    display: flex;
+    gap: 30px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.25);
+}
+
+.cerrarModal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #f7c6d9;
+    color: #6b3d4c;
+
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.imagenModal {
+    width: 45%;
+    height: 350px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.imagenModal img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.infoModal {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.infoModal h2 {
+    color: #6b3d4c;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.infoModal p {
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.precioModal {
+    color: #d96b91;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.btnAgregarModal {
+    width: 100%;
+    padding: 14px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #d96b91;
+    color: white;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btnAgregarModal:hover {
+    background: #b95779;
+}
+
+}
+
+/* ==================================================
+   MODAL PRODUCTO - CORRECCIÓN FINAL
+   ================================================== */
+
+.modalProducto {
+    display: none;
+
+    position: fixed;
+
+    z-index: 99999;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* ================================================
+   CONTENIDO
+   ================================================ */
+
+.contenidoModal {
+
+    position: relative;
+
+    width: 90%;
+    max-width: 750px;
+
+    background: #fffafc;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    display: flex;
+
+    gap: 30px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.25);
+
+    animation:
+        aparecerModal .25s ease;
+}
+
+
+/* ================================================
+   ANIMACIÓN
+   ================================================ */
+
+@keyframes aparecerModal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(.90);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+/* ================================================
+   BOTÓN CERRAR
+   ================================================ */
+
+.cerrarModal {
+
+    position: absolute;
+
+    top: 12px;
+    right: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f7c6d9;
+
+    color: #6b3d4c;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+}
+
+
+.cerrarModal:hover {
+
+    background: #e9a9c1;
+
+    transform:
+        scale(1.1);
+
+}
+
+
+/* ================================================
+   IMAGEN
+   ================================================ */
+
+.imagenModal {
+
+    width: 45%;
+
+    height: 350px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+}
+
+
+.imagenModal img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+}
+
+
+/* ================================================
+   INFORMACIÓN
+   ================================================ */
+
+.infoModal {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.infoModal h2 {
+
+    color: #6b3d4c;
+
+    font-size: 28px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.infoModal p {
+
+    color: #777;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+
+}
+
+
+.precioModal {
+
+    color: #d06f9a;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* ================================================
+   BOTÓN AGREGAR AL CARRITO
+   ================================================ */
+
+.btnAgregarModal {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #d783aa;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .25s;
+
+}
+
+
+.btnAgregarModal:hover {
+
+    background: #b95779;
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* ================================================
+   RESPONSIVE DEL MODAL
+   ================================================ */
+
+@media screen and (max-width: 700px) {
+
+    .contenidoModal {
+
+        flex-direction: column;
+
+        max-height: 90vh;
+
+        overflow-y: auto;
+
+        padding: 25px;
+
+    }
+
+
+    .imagenModal {
+
+        width: 100%;
+
+        height: 250px;
+
+    }
+
+
+    .infoModal h2 {
+
+        font-size: 23px;
+
+    }
+
+
+    .precioModal {
+
+        font-size: 24px;
+
+    }
+
+}
